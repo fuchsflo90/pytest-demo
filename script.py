@@ -23,6 +23,7 @@ def store_to_database(table: str, records: list):
         "mysql://florian:fuchs@some.database/production"
     )
 
+    # NOTE: usually we would use a with clause here!!
     connection = sqlengine.connect()
     connection.execute(query)
 
